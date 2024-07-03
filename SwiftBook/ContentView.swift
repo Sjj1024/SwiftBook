@@ -22,7 +22,12 @@ struct ContentView: View {
             Image("desktop")
                 .resizable()
                 .frame(width: .infinity, height: 260)
-                .mask(RoundedRectangle(cornerRadius: 30))
+                .mask(RoundedRectangle(cornerRadius: 30)).overlay(content: {
+                    Text("欢迎使用Swift").foregroundStyle(.white)
+                        .padding()
+                        .background(.red)
+                        .cornerRadius(30)
+                })
 
             TextField(text: $name, label: {
                 Text("用户名")
