@@ -9,22 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @State var name = ""
-
     @State var password = ""
+    @State var info = "简介"
 
-    @State var info = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            Image("desktop")
+                .resizable()
+                .frame(width: .infinity, height: 260)
+                .mask(RoundedRectangle(cornerRadius: 30))
+
             TextField(text: $name, label: {
                 Text("用户名")
-            })
+            }).padding()
             SecureField(text: $password, label: {
                 Text("密码")
-            })
+            }).padding()
             TextEditor(text: $info)
+                .padding()
         }
         .padding()
     }
