@@ -11,6 +11,7 @@ enum TabType: Int, Hashable {
     case home
     case videos
     case message
+    case seting
 
     var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum TabType: Int, Hashable {
                 return "Videos"
             case .message:
                 return "Message"
+            case .seting:
+                return "Setting"
         }
     }
 
@@ -31,6 +34,8 @@ enum TabType: Int, Hashable {
                 return "video.fill"
             case .message:
                 return "message.fill"
+            case .seting:
+                return "printer.fill"
         }
     }
 }
@@ -45,7 +50,7 @@ struct SwitchTab: View {
                     Button(action: {
                         selectedTab = TabType.message
                     }, label: {
-                        Text("Go to Message page").padding().background().cornerRadius(10, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        Text("Go to Message page").padding().background().cornerRadius(10, antialiased: true)
                     })
                 })
             }
@@ -73,6 +78,22 @@ struct SwitchTab: View {
                 }
                 .tag(TabType.videos)
                 .badge(/*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+
+            Color(.brown)
+                .ignoresSafeArea(edges: .top)
+                .tabItem {
+                    Text("设置")
+                    Image(systemName: "printer.fill")
+                }
+                .tag(TabType.videos)
+
+            Color(.cyan)
+                .ignoresSafeArea(edges: .top)
+                .tabItem {
+                    Text("我的")
+                    Image(systemName: "iphone.gen3.radiowaves.left.and.right.circle.fill")
+                }
+                .tag(TabType.videos)
         }
     }
 }
