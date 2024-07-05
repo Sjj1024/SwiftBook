@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40A15EF2C37C86800D60193 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A15EE2C37C86800D60193 /* ToolView.swift */; };
 		E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */; };
 		E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8C2C341A7000A04A04 /* ContentView.swift */; };
 		E4F74C8F2C341A7100A04A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F74C8E2C341A7100A04A04 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40A15EE2C37C86800D60193 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
 		E4F74C872C341A7000A04A04 /* SwiftBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBookApp.swift; sourceTree = "<group>"; };
 		E4F74C8C2C341A7000A04A04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				E4F74CB42C363DDB00A04A04 /* RouterView.swift */,
 				E4F74CB62C36901000A04A04 /* StackView.swift */,
 				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
+				E40A15EE2C37C86800D60193 /* ToolView.swift */,
 			);
 			path = SwiftBook;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */,
 				E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */,
 				E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */,
+				E40A15EF2C37C86800D60193 /* ToolView.swift in Sources */,
 				E4F74CB72C36901000A04A04 /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
