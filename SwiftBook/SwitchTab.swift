@@ -73,11 +73,9 @@ struct SwitchTab: View {
             Color(.purple)
                 .ignoresSafeArea(edges: .top)
                 .tabItem {
-                    Text("视频")
-                    Image(systemName: "video.fill")
+                    Text("")
                 }
                 .tag(TabType.videos)
-                .badge(/*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
 
             Color(.brown)
                 .ignoresSafeArea(edges: .top)
