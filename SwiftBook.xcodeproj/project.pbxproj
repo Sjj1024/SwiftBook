@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40529C02C38EE3D002EC42C /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40529BF2C38EE3D002EC42C /* CardItem.swift */; };
 		E40A15EF2C37C86800D60193 /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A15EE2C37C86800D60193 /* ToolView.swift */; };
+		E4C46F082C38E02200145019 /* Hongshu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C46F072C38E02200145019 /* Hongshu.swift */; };
 		E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */; };
 		E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8C2C341A7000A04A04 /* ContentView.swift */; };
 		E4F74C8F2C341A7100A04A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F74C8E2C341A7100A04A04 /* Assets.xcassets */; };
@@ -38,7 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40529BF2C38EE3D002EC42C /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		E40A15EE2C37C86800D60193 /* ToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
+		E4C46F072C38E02200145019 /* Hongshu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hongshu.swift; sourceTree = "<group>"; };
 		E4F74C872C341A7000A04A04 /* SwiftBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBookApp.swift; sourceTree = "<group>"; };
 		E4F74C8C2C341A7000A04A04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				E4F74CB62C36901000A04A04 /* StackView.swift */,
 				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
 				E40A15EE2C37C86800D60193 /* ToolView.swift */,
+				E4C46F072C38E02200145019 /* Hongshu.swift */,
+				E40529BF2C38EE3D002EC42C /* CardItem.swift */,
 			);
 			path = SwiftBook;
 			sourceTree = "<group>";
@@ -270,6 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F74CB52C363DDB00A04A04 /* RouterView.swift in Sources */,
+				E4C46F082C38E02200145019 /* Hongshu.swift in Sources */,
+				E40529C02C38EE3D002EC42C /* CardItem.swift in Sources */,
 				E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */,
 				E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */,
 				E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */,
@@ -446,6 +454,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +484,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
