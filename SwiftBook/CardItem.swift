@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CardItem: View {
     // 传递过来的图片和昵称
-    var preImg = ""
-    var avatar = ""
-    var nickname = ""
-    var distance = ""
+    var preImg = "xigua"
+    var avatar = "xigua"
+    var nickname = "西瓜"
+    var distance = "19"
 
     var body: some View {
         VStack {
@@ -22,10 +22,7 @@ struct CardItem: View {
             HStack {
                 HStack {
                     Image(avatar)
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .aspectRatio(contentMode: .fit)
-                        .mask(Circle())
+                        .avator(w: 20, h: 20)
                     Text(nickname)
                 }
                 Spacer()

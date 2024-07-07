@@ -73,7 +73,7 @@ struct SwitchTab: View {
             Color(.purple)
                 .ignoresSafeArea(edges: .top)
                 .tabItem {
-                    Text("")
+                    Image(systemName: "plus")
                 }
                 .tag(TabType.videos)
 
