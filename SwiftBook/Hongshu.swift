@@ -15,12 +15,8 @@ struct Hongshu: View {
                 ScrollView(content: {
                     TabView(selection: $current) {
                         // 关注
-                        HStack(content: {
-                            FollowView()
-                            Spacer()
-                        })
-                        .padding(.horizontal)
-                        .tag(0)
+                        FollowView()
+                            .tag(0)
                         // 发现
                         HStack(content: {
                             VStack(content: {
@@ -35,7 +31,6 @@ struct Hongshu: View {
                                 Spacer()
                             })
                         })
-                        .padding(.horizontal)
                         .tag(1)
                         // 附近
                         HStack(content: {
@@ -51,18 +46,16 @@ struct Hongshu: View {
                                 Spacer()
                             })
                         })
-                        .padding(.horizontal)
                         .tag(2)
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))
-                    .frame(width: UIScreen.main.bounds.width,
-                           height: UIScreen.main.bounds.height - 100)
+                    .frame(height: UIScreen.main.bounds.height - 100)
                 })
                 .background(.gray.opacity(0.3))
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal, content: {
-                        HStack {
+                        HStack(spacing: 30) {
                             Text("关注")
                                 .foregroundColor(
                                     current == 0 ? .blue : .black)
