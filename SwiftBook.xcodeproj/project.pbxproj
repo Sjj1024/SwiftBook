@@ -26,6 +26,10 @@
 		E4F74CA82C341A7100A04A04 /* SwiftBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74CA72C341A7100A04A04 /* SwiftBookUITestsLaunchTests.swift */; };
 		E4F74CB72C36901000A04A04 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74CB62C36901000A04A04 /* StackView.swift */; };
 		E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */; };
+		E4FF7CE42C3D44640057411C /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE32C3D44640057411C /* NotesView.swift */; };
+		E4FF7CE62C3D4B0E0057411C /* TabScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE52C3D4B0E0057411C /* TabScroll.swift */; };
+		E4FF7CE82C3D568E0057411C /* CollectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE72C3D568E0057411C /* CollectorView.swift */; };
+		E4FF7CEA2C3D56D00057411C /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE92C3D56D00057411C /* LikeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		E4F74CA72C341A7100A04A04 /* SwiftBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4F74CB62C36901000A04A04 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTab.swift; sourceTree = "<group>"; };
+		E4FF7CE32C3D44640057411C /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		E4FF7CE52C3D4B0E0057411C /* TabScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScroll.swift; sourceTree = "<group>"; };
+		E4FF7CE72C3D568E0057411C /* CollectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorView.swift; sourceTree = "<group>"; };
+		E4FF7CE92C3D56D00057411C /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +127,15 @@
 		E4CD9F782C3A30FC0029347C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4F74CB62C36901000A04A04 /* StackView.swift */,
+				E44A847C2C39333000374F68 /* BottomTab.swift */,
+				E40529BF2C38EE3D002EC42C /* CardItem.swift */,
+				E4C46F072C38E02200145019 /* Hongshu.swift */,
+				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
 				E4CD9F792C3A31190029347C /* FollowView.swift */,
 				E4EF97982C3AA075003AB670 /* MessageView.swift */,
 				E4EF979C2C3AA694003AB670 /* Account.swift */,
+				E4FF7CE52C3D4B0E0057411C /* TabScroll.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +145,9 @@
 			children = (
 				E4CD9F7C2C3A42200029347C /* FollowUserCard.swift */,
 				E4EF979A2C3AA4E3003AB670 /* MsgItem.swift */,
+				E4FF7CE32C3D44640057411C /* NotesView.swift */,
+				E4FF7CE72C3D568E0057411C /* CollectorView.swift */,
+				E4FF7CE92C3D56D00057411C /* LikeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -174,11 +191,6 @@
 				E4F74C8C2C341A7000A04A04 /* ContentView.swift */,
 				E4F74C8E2C341A7100A04A04 /* Assets.xcassets */,
 				E4F74C902C341A7100A04A04 /* Preview Content */,
-				E4F74CB62C36901000A04A04 /* StackView.swift */,
-				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
-				E4C46F072C38E02200145019 /* Hongshu.swift */,
-				E40529BF2C38EE3D002EC42C /* CardItem.swift */,
-				E44A847C2C39333000374F68 /* BottomTab.swift */,
 			);
 			path = SwiftBook;
 			sourceTree = "<group>";
@@ -339,18 +351,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FF7CE62C3D4B0E0057411C /* TabScroll.swift in Sources */,
 				E464023E2C3976BC0034F0D0 /* ImageExt.swift in Sources */,
 				E4C46F082C38E02200145019 /* Hongshu.swift in Sources */,
+				E4FF7CE42C3D44640057411C /* NotesView.swift in Sources */,
 				E4EF979B2C3AA4E3003AB670 /* MsgItem.swift in Sources */,
 				E4CD9F7A2C3A31190029347C /* FollowView.swift in Sources */,
 				E4EF979D2C3AA694003AB670 /* Account.swift in Sources */,
 				E40529C02C38EE3D002EC42C /* CardItem.swift in Sources */,
 				E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */,
+				E4FF7CEA2C3D56D00057411C /* LikeView.swift in Sources */,
 				E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */,
 				E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */,
 				E4F74CB72C36901000A04A04 /* StackView.swift in Sources */,
 				E4EF97972C3A799E003AB670 /* BorderTest.swift in Sources */,
 				E44A847D2C39333000374F68 /* BottomTab.swift in Sources */,
+				E4FF7CE82C3D568E0057411C /* CollectorView.swift in Sources */,
 				E4EF97992C3AA075003AB670 /* MessageView.swift in Sources */,
 				E4CD9F7D2C3A42200029347C /* FollowUserCard.swift in Sources */,
 			);
