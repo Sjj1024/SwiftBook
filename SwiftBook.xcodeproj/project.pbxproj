@@ -30,6 +30,9 @@
 		E4FF7CE62C3D4B0E0057411C /* TabScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE52C3D4B0E0057411C /* TabScroll.swift */; };
 		E4FF7CE82C3D568E0057411C /* CollectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE72C3D568E0057411C /* CollectorView.swift */; };
 		E4FF7CEA2C3D56D00057411C /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF7CE92C3D56D00057411C /* LikeView.swift */; };
+		E4FF7CF02C3D5F830057411C /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FF7CED2C3D5F830057411C /* message.png */; };
+		E4FF7CF12C3D5F830057411C /* hongshu.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FF7CEE2C3D5F830057411C /* hongshu.png */; };
+		E4FF7CF22C3D5F830057411C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FF7CEF2C3D5F830057411C /* account.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,10 @@
 		E4FF7CE52C3D4B0E0057411C /* TabScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScroll.swift; sourceTree = "<group>"; };
 		E4FF7CE72C3D568E0057411C /* CollectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorView.swift; sourceTree = "<group>"; };
 		E4FF7CE92C3D56D00057411C /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		E4FF7CEB2C3D5CBA0057411C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E4FF7CED2C3D5F830057411C /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		E4FF7CEE2C3D5F830057411C /* hongshu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hongshu.png; sourceTree = "<group>"; };
+		E4FF7CEF2C3D5F830057411C /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				E4F74CB62C36901000A04A04 /* StackView.swift */,
-				E44A847C2C39333000374F68 /* BottomTab.swift */,
-				E40529BF2C38EE3D002EC42C /* CardItem.swift */,
 				E4C46F072C38E02200145019 /* Hongshu.swift */,
 				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
 				E4CD9F792C3A31190029347C /* FollowView.swift */,
@@ -143,9 +148,11 @@
 		E4CD9F7B2C3A41CD0029347C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E40529BF2C38EE3D002EC42C /* CardItem.swift */,
 				E4CD9F7C2C3A42200029347C /* FollowUserCard.swift */,
 				E4EF979A2C3AA4E3003AB670 /* MsgItem.swift */,
 				E4FF7CE32C3D44640057411C /* NotesView.swift */,
+				E44A847C2C39333000374F68 /* BottomTab.swift */,
 				E4FF7CE72C3D568E0057411C /* CollectorView.swift */,
 				E4FF7CE92C3D56D00057411C /* LikeView.swift */,
 			);
@@ -163,6 +170,8 @@
 		E4F74C7E2C341A7000A04A04 = {
 			isa = PBXGroup;
 			children = (
+				E4FF7CEB2C3D5CBA0057411C /* README.md */,
+				E4FF7CEC2C3D5CDC0057411C /* Resources */,
 				E4F74C892C341A7000A04A04 /* SwiftBook */,
 				E4F74C9A2C341A7100A04A04 /* SwiftBookTests */,
 				E4F74CA42C341A7100A04A04 /* SwiftBookUITests */,
@@ -218,6 +227,16 @@
 				E4F74CA72C341A7100A04A04 /* SwiftBookUITestsLaunchTests.swift */,
 			);
 			path = SwiftBookUITests;
+			sourceTree = "<group>";
+		};
+		E4FF7CEC2C3D5CDC0057411C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4FF7CEF2C3D5F830057411C /* account.png */,
+				E4FF7CEE2C3D5F830057411C /* hongshu.png */,
+				E4FF7CED2C3D5F830057411C /* message.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +345,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F74C922C341A7100A04A04 /* Preview Assets.xcassets in Resources */,
+				E4FF7CF22C3D5F830057411C /* account.png in Resources */,
 				E4F74C8F2C341A7100A04A04 /* Assets.xcassets in Resources */,
+				E4FF7CF12C3D5F830057411C /* hongshu.png in Resources */,
+				E4FF7CF02C3D5F830057411C /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
