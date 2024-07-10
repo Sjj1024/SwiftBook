@@ -9,9 +9,12 @@ import SwiftUI
 
 struct Hongshu: View {
     @State var current = 0
+    @State var goDetail = false
+    @Namespace var detail
+
     var body: some View {
-        VStack {
-            NavigationStack {
+        NavigationStack {
+            VStack {
                 ScrollView(content: {
                     TabView(selection: $current) {
                         // 关注
@@ -19,12 +22,20 @@ struct Hongshu: View {
                             .tag(0)
                         // 发现
                         HStack(content: {
+                            // 点击跳转到子页面
                             VStack(content: {
-                                CardItem(preImg: "taozi", avatar: "taozi", nickname: "11111", distance: "555")
+                                NavigationLink {
+                                    ContentDetail()
+                                        .navigationBarBackButtonHidden()
+                                } label: {
+                                    CardItem(preImg: "taozi", avatar: "taozi", nickname: "11111", distance: "555")
+                                }
+
                                 CardItem(preImg: "xigua", avatar: "xigua", nickname: "putao", distance: "11")
                                 CardItem(preImg: "hongyou", avatar: "xigua", nickname: "山竹", distance: "53")
                                 Spacer()
                             })
+
                             VStack(content: {
                                 CardItem(preImg: "liulian", avatar: "liulian", nickname: "liula", distance: "11")
                                 CardItem(preImg: "xigua2", avatar: "xigua2", nickname: "山竹", distance: "53")
@@ -82,8 +93,9 @@ struct Hongshu: View {
                         }
                     })
                 }
+                // 底部菜单tab
+                BottomTab()
             }
-            BottomTab()
         }
     }
 }
