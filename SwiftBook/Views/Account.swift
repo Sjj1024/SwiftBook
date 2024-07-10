@@ -147,7 +147,9 @@ struct Account: View {
                 .padding(.top, 110)
                 .padding(.horizontal)
                 .background(Image("liulian").resizable().aspectRatio(contentMode: .fill)
-                    .overlay(Color.black.opacity(0.7)))
+                    .overlay(
+                        LinearGradient(gradient: Gradient(colors: [Color.black, Color.white.opacity(0.3)]), startPoint: .bottom, endPoint: .top)
+                    ))
                 // 内容列表
                 VStack {
                     // 笔记和收藏+赞过
