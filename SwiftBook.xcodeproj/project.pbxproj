@@ -21,7 +21,7 @@
 		E4EF97992C3AA075003AB670 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF97982C3AA075003AB670 /* MessageView.swift */; };
 		E4EF979B2C3AA4E3003AB670 /* MsgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF979A2C3AA4E3003AB670 /* MsgItem.swift */; };
 		E4EF979D2C3AA694003AB670 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF979C2C3AA694003AB670 /* Account.swift */; };
-		E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */; };
+		E4F74C8B2C341A7000A04A04 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8A2C341A7000A04A04 /* Main.swift */; };
 		E4F74C8D2C341A7000A04A04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F74C8C2C341A7000A04A04 /* ContentView.swift */; };
 		E4F74C8F2C341A7100A04A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F74C8E2C341A7100A04A04 /* Assets.xcassets */; };
 		E4F74C922C341A7100A04A04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F74C912C341A7100A04A04 /* Preview Assets.xcassets */; };
@@ -85,7 +85,7 @@
 		E4EF979A2C3AA4E3003AB670 /* MsgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgItem.swift; sourceTree = "<group>"; };
 		E4EF979C2C3AA694003AB670 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		E4F74C872C341A7000A04A04 /* SwiftBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBookApp.swift; sourceTree = "<group>"; };
+		E4F74C8A2C341A7000A04A04 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		E4F74C8C2C341A7000A04A04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4F74C8E2C341A7100A04A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F74C912C341A7100A04A04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -150,6 +150,7 @@
 		E4CD9F782C3A30FC0029347C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4F74C8C2C341A7000A04A04 /* ContentView.swift */,
 				E4F74CB62C36901000A04A04 /* StackView.swift */,
 				E4C46F072C38E02200145019 /* Hongshu.swift */,
 				E4F74CB82C369EDC00A04A04 /* SwitchTab.swift */,
@@ -216,8 +217,7 @@
 				E4CD9F7B2C3A41CD0029347C /* Components */,
 				E4CD9F782C3A30FC0029347C /* Views */,
 				E464023C2C39769E0034F0D0 /* Exten */,
-				E4F74C8A2C341A7000A04A04 /* SwiftBookApp.swift */,
-				E4F74C8C2C341A7000A04A04 /* ContentView.swift */,
+				E4F74C8A2C341A7000A04A04 /* Main.swift */,
 				E4F74C8E2C341A7100A04A04 /* Assets.xcassets */,
 				E4F74C902C341A7100A04A04 /* Preview Content */,
 			);
@@ -406,7 +406,7 @@
 				E4FF7CEA2C3D56D00057411C /* LikeView.swift in Sources */,
 				E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */,
 				E4D91CC02C3E33E000C8F3F0 /* Animation1.swift in Sources */,
-				E4F74C8B2C341A7000A04A04 /* SwiftBookApp.swift in Sources */,
+				E4F74C8B2C341A7000A04A04 /* Main.swift in Sources */,
 				E4F74CB72C36901000A04A04 /* StackView.swift in Sources */,
 				E42C1AD72C3F8020000D2CE0 /* HomeView.swift in Sources */,
 				E4EF97972C3A799E003AB670 /* BorderTest.swift in Sources */,
@@ -592,7 +592,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.SwiftBook;
+				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songm3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -622,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.SwiftBook;
+				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songm3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -26,7 +26,7 @@ struct FollowUserCard: View {
             // 图片
             Image("xigua2")
                 .resizable()
-                .frame(width: .infinity, height: 300)
+                .frame(maxHeight: 400)
                 .aspectRatio(contentMode: .fill)
             // 点赞分享
             HStack {
