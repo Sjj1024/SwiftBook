@@ -104,7 +104,9 @@ struct Account: View {
                             HStack {
                                 Image(systemName: "cart")
                                 Text("购物车")
-                            }.foregroundColor(.white)
+                            }
+                            .foregroundColor(.white)
+
                             Text("查看推荐好物")
                                 .foregroundColor(.gray)
                                 .font(.footnote)

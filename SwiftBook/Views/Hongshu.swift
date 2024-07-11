@@ -11,6 +11,8 @@ struct Hongshu: View {
     @State var current = 0
     @State var goDetail = false
     @Namespace var detail
+    // 自定义自己视图中的观察对象
+    @EnvironmentObject var person: Person
 
     var body: some View {
         NavigationStack {
@@ -32,7 +34,13 @@ struct Hongshu: View {
                                 }
 
                                 CardItem(preImg: "xigua", avatar: "xigua", nickname: "putao", distance: "11")
+                                    .onTapGesture {
+                                        person.id = 2
+                                    }
                                 CardItem(preImg: "hongyou", avatar: "xigua", nickname: "山竹", distance: "53")
+                                    .onTapGesture {
+                                        person.id = 3
+                                    }
                                 Spacer()
                             })
 
@@ -101,5 +109,5 @@ struct Hongshu: View {
 }
 
 #Preview {
-    Hongshu()
+    Hongshu().environmentObject(Person())
 }

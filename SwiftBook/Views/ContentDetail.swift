@@ -14,7 +14,9 @@ struct ContentDetail: View {
     @State var imgIndex = 1
     // 返回上个页面
     @Environment(\.presentationMode) var presentationMode
-    
+    // 定义全局观察对象
+    @EnvironmentObject var person: Person
+
     var body: some View {
         // 内容详情
         VStack {
@@ -69,21 +71,25 @@ struct ContentDetail: View {
                     Text("全世界最大的骗局就是山姆超市")
                         .font(.title2)
                         .padding(.horizontal)
+                        .foregroundColor(Color("theam"))
+                        .onTapGesture {
+                            person.id += 1
+                        }
                     Spacer()
                 }
                 // 评论内容
                 HStack {
                     VStack {
-                        ForEach(0 ..< 100) { index in
+                        ForEach(0 ..< 100) { _ in
                             HStack {
-                                Image("putao")
+                                Image(person.manList[person.id].avator)
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                     .mask(Circle())
                                 VStack(alignment: .leading) {
-                                    Text("自在\(index)")
+                                    Text(person.manList[person.id].name)
                                         .foregroundStyle(.secondary)
-                                    Text("别认为山姆会员都是骗子")
+                                    Text(person.manList[person.id].content)
                                     Text("昨天 21:22 北京")
                                         .foregroundStyle(.secondary)
                                 }
@@ -91,6 +97,25 @@ struct ContentDetail: View {
                                 Image(systemName: "heart")
                             }.padding(.horizontal)
                         }
+
+                        // 自定义的数据内容
+//                        ForEach(person.manList, id: \.id) { p in
+//                            HStack {
+//                                Image(p.avator)
+//                                    .resizable()
+//                                    .frame(width: 30, height: 30)
+//                                    .mask(Circle())
+//                                VStack(alignment: .leading) {
+//                                    Text("自在\(p.name)")
+//                                        .foregroundStyle(.secondary)
+//                                    Text(p.content)
+//                                    Text("昨天 21:22 北京")
+//                                        .foregroundStyle(.secondary)
+//                                }
+//                                Spacer()
+//                                Image(systemName: "heart")
+//                            }.padding(.horizontal)
+//                        }
                     }
                     Spacer()
                 }
@@ -100,15 +125,15 @@ struct ContentDetail: View {
                 TextField("说点什么...", text: $commit)
                     .padding(5)
                 Spacer()
-                HStack {
+                HStack(spacing: 0) {
                     Image(systemName: "heart")
                     Text("13")
                 }
-                HStack {
+                HStack(spacing: 0) {
                     Image(systemName: "star")
                     Text("13")
                 }
-                HStack {
+                HStack(spacing: 0) {
                     Image(systemName: "message")
                     Text("13")
                 }
@@ -119,5 +144,5 @@ struct ContentDetail: View {
 }
 
 #Preview {
-    ContentDetail()
+    ContentDetail().environmentObject(Person())
 }
