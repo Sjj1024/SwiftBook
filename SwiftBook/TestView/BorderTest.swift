@@ -25,7 +25,7 @@ struct BorderTest: View {
                     .resizable()
                     .frame(width: 50, height: 50)
                     .mask(Circle())
-                Text("1024小神\(scrollVal)")
+                Text("1024小神")
                 Spacer()
                 Button(action: {}, label: {
                     Text("关注")

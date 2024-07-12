@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentDetail: View {
-    // 评论内容
-    @State var commit = ""
     // 轮播图
     @State var imgIndex = 1
     // 返回上个页面
     @Environment(\.presentationMode) var presentationMode
     // 定义全局观察对象
     @EnvironmentObject var person: Person
+    // 用户评论内容
+    @AppStorage("commit") private var commit: String = ""
+    
 
     var body: some View {
         // 内容详情
@@ -97,42 +98,26 @@ struct ContentDetail: View {
                                 Image(systemName: "heart")
                             }.padding(.horizontal)
                         }
-
-                        // 自定义的数据内容
-//                        ForEach(person.manList, id: \.id) { p in
-//                            HStack {
-//                                Image(p.avator)
-//                                    .resizable()
-//                                    .frame(width: 30, height: 30)
-//                                    .mask(Circle())
-//                                VStack(alignment: .leading) {
-//                                    Text("自在\(p.name)")
-//                                        .foregroundStyle(.secondary)
-//                                    Text(p.content)
-//                                    Text("昨天 21:22 北京")
-//                                        .foregroundStyle(.secondary)
-//                                }
-//                                Spacer()
-//                                Image(systemName: "heart")
-//                            }.padding(.horizontal)
-//                        }
                     }
                     Spacer()
                 }
             }
             // 底部功能
             HStack {
-                TextField("说点什么...", text: $commit)
-                    .padding(5)
-                Spacer()
+                TextField("Username", text: $commit)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .padding()
+                // Spacer()
                 HStack(spacing: 0) {
                     Image(systemName: "heart")
                     Text("13")
                 }
+                // Spacer()
                 HStack(spacing: 0) {
                     Image(systemName: "star")
                     Text("13")
                 }
+                // Spacer()
                 HStack(spacing: 0) {
                     Image(systemName: "message")
                     Text("13")

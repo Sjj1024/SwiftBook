@@ -13,6 +13,8 @@ struct Hongshu: View {
     @Namespace var detail
     // 自定义自己视图中的观察对象
     @EnvironmentObject var person: Person
+    // 存储数据
+    @AppStorage("username") var username = ""
 
     var body: some View {
         NavigationStack {
