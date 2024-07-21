@@ -83,6 +83,11 @@ struct DialogTest: View {
                 })
                 .fullScreenCover(isPresented: $fullScreen, content: {
                     Text("全屏显示的内容")
+                    Button(action: {
+                        fullScreen = false
+                    }, label: {
+                        Text("关闭")
+                    })
                 })
         }
     }
