@@ -72,7 +72,7 @@ struct DialogTest: View {
                 }, message: {
                     Text("confirm")
                 })
-            // contentMenu
+            // contentMenu 长按才有效果
             Text("contextMenu")
                 .padding()
                 .background(.blue)
