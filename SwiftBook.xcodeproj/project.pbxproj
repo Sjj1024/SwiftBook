@@ -14,6 +14,8 @@
 		E43331DA2C421F1D00CC73DA /* DialogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43331D92C421F1C00CC73DA /* DialogTest.swift */; };
 		E43331DC2C42281200CC73DA /* GridTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43331DB2C42281200CC73DA /* GridTest.swift */; };
 		E43331DF2C42469C00CC73DA /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43331DE2C42469C00CC73DA /* LeftMenu.swift */; };
+		E43866BA2C5CCE2A000CE387 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43866B92C5CCE2A000CE387 /* LoadingView.swift */; };
+		E43866BC2C5DBFEB000CE387 /* LoadingSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43866BB2C5DBFEB000CE387 /* LoadingSub.swift */; };
 		E44A847D2C39333000374F68 /* BottomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A847C2C39333000374F68 /* BottomTab.swift */; };
 		E45E28842C4CFE160010BFEB /* ScalRotaEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */; };
 		E464023E2C3976BC0034F0D0 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464023D2C3976BC0034F0D0 /* ImageExt.swift */; };
@@ -84,6 +86,8 @@
 		E43331D92C421F1C00CC73DA /* DialogTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogTest.swift; sourceTree = "<group>"; };
 		E43331DB2C42281200CC73DA /* GridTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTest.swift; sourceTree = "<group>"; };
 		E43331DE2C42469C00CC73DA /* LeftMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
+		E43866B92C5CCE2A000CE387 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E43866BB2C5DBFEB000CE387 /* LoadingSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSub.swift; sourceTree = "<group>"; };
 		E44A847C2C39333000374F68 /* BottomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTab.swift; sourceTree = "<group>"; };
 		E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalRotaEffect.swift; sourceTree = "<group>"; };
 		E464023D2C3976BC0034F0D0 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				E43331DB2C42281200CC73DA /* GridTest.swift */,
 				E43331DE2C42469C00CC73DA /* LeftMenu.swift */,
 				E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */,
+				E43866B92C5CCE2A000CE387 /* LoadingView.swift */,
+				E43866BB2C5DBFEB000CE387 /* LoadingSub.swift */,
 			);
 			path = TestView;
 			sourceTree = "<group>";
@@ -437,7 +443,9 @@
 				E42C1AD72C3F8020000D2CE0 /* HomeView.swift in Sources */,
 				E4EF97972C3A799E003AB670 /* BorderTest.swift in Sources */,
 				E44A847D2C39333000374F68 /* BottomTab.swift in Sources */,
+				E43866BA2C5CCE2A000CE387 /* LoadingView.swift in Sources */,
 				E4FE3EE42C40D3B100A467A5 /* WrapLayout.swift in Sources */,
+				E43866BC2C5DBFEB000CE387 /* LoadingSub.swift in Sources */,
 				E4FF7CE82C3D568E0057411C /* CollectorView.swift in Sources */,
 				E43331DC2C42281200CC73DA /* GridTest.swift in Sources */,
 				E42C1ADA2C3FC0C8000D2CE0 /* Model.swift in Sources */,

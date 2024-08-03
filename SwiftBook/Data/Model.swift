@@ -30,3 +30,9 @@ struct Man: Identifiable {
     var avator: String
     var content: String
 }
+
+
+
+class ProcessObs: ObservableObject {
+    @Published var process = 0.1
+}
