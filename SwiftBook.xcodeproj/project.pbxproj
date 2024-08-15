@@ -19,6 +19,9 @@
 		E44A847D2C39333000374F68 /* BottomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A847C2C39333000374F68 /* BottomTab.swift */; };
 		E45E28842C4CFE160010BFEB /* ScalRotaEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */; };
 		E464023E2C3976BC0034F0D0 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464023D2C3976BC0034F0D0 /* ImageExt.swift */; };
+		E46B26082C6DAEA100CF0F08 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B26072C6DAEA100CF0F08 /* ScannerView.swift */; };
+		E46B260A2C6DAECB00CF0F08 /* ScanCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B26092C6DAECB00CF0F08 /* ScanCode.swift */; };
+		E46B260D2C6DB4B000CF0F08 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B260C2C6DB4B000CF0F08 /* WebView.swift */; };
 		E4C46F082C38E02200145019 /* Hongshu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C46F072C38E02200145019 /* Hongshu.swift */; };
 		E4CD9F7A2C3A31190029347C /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD9F792C3A31190029347C /* FollowView.swift */; };
 		E4CD9F7D2C3A42200029347C /* FollowUserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD9F7C2C3A42200029347C /* FollowUserCard.swift */; };
@@ -91,6 +94,10 @@
 		E44A847C2C39333000374F68 /* BottomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTab.swift; sourceTree = "<group>"; };
 		E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalRotaEffect.swift; sourceTree = "<group>"; };
 		E464023D2C3976BC0034F0D0 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
+		E46B26072C6DAEA100CF0F08 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		E46B26092C6DAECB00CF0F08 /* ScanCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCode.swift; sourceTree = "<group>"; };
+		E46B260B2C6DB16C00CF0F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E46B260C2C6DB4B000CF0F08 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		E4C46F072C38E02200145019 /* Hongshu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hongshu.swift; sourceTree = "<group>"; };
 		E4CD9F792C3A31190029347C /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
 		E4CD9F7C2C3A42200029347C /* FollowUserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUserCard.swift; sourceTree = "<group>"; };
@@ -210,6 +217,9 @@
 				E45E28832C4CFE160010BFEB /* ScalRotaEffect.swift */,
 				E43866B92C5CCE2A000CE387 /* LoadingView.swift */,
 				E43866BB2C5DBFEB000CE387 /* LoadingSub.swift */,
+				E46B26072C6DAEA100CF0F08 /* ScannerView.swift */,
+				E46B26092C6DAECB00CF0F08 /* ScanCode.swift */,
+				E46B260C2C6DB4B000CF0F08 /* WebView.swift */,
 			);
 			path = TestView;
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 		E4F74C892C341A7000A04A04 /* SwiftBook */ = {
 			isa = PBXGroup;
 			children = (
+				E46B260B2C6DB16C00CF0F08 /* Info.plist */,
 				E42C1AD82C3FC0B8000D2CE0 /* Data */,
 				E4EF97952C3A7983003AB670 /* TestView */,
 				E4CD9F7B2C3A41CD0029347C /* Components */,
@@ -423,6 +434,7 @@
 				E4FE3EE62C4102F600A467A5 /* AppStorageTest.swift in Sources */,
 				E4D91CC22C3E707000C8F3F0 /* ContentDetail.swift in Sources */,
 				E4FF7CE62C3D4B0E0057411C /* TabScroll.swift in Sources */,
+				E46B260A2C6DAECB00CF0F08 /* ScanCode.swift in Sources */,
 				E43331DA2C421F1D00CC73DA /* DialogTest.swift in Sources */,
 				E464023E2C3976BC0034F0D0 /* ImageExt.swift in Sources */,
 				E43331DF2C42469C00CC73DA /* LeftMenu.swift in Sources */,
@@ -430,6 +442,7 @@
 				E42C1ADC2C40D093000D2CE0 /* LineWrap.swift in Sources */,
 				E4FF7CE42C3D44640057411C /* NotesView.swift in Sources */,
 				E4EF979B2C3AA4E3003AB670 /* MsgItem.swift in Sources */,
+				E46B260D2C6DB4B000CF0F08 /* WebView.swift in Sources */,
 				E4CD9F7A2C3A31190029347C /* FollowView.swift in Sources */,
 				E4EF979D2C3AA694003AB670 /* Account.swift in Sources */,
 				E40529C02C38EE3D002EC42C /* CardItem.swift in Sources */,
@@ -437,6 +450,7 @@
 				E4FF7CEA2C3D56D00057411C /* LikeView.swift in Sources */,
 				E4F74CB92C369EDC00A04A04 /* SwitchTab.swift in Sources */,
 				E4D91CC02C3E33E000C8F3F0 /* Animation1.swift in Sources */,
+				E46B26082C6DAEA100CF0F08 /* ScannerView.swift in Sources */,
 				E4F74C8B2C341A7000A04A04 /* Main.swift in Sources */,
 				E4F74CB72C36901000A04A04 /* StackView.swift in Sources */,
 				E45E28842C4CFE160010BFEB /* ScalRotaEffect.swift in Sources */,
@@ -617,6 +631,7 @@
 				DEVELOPMENT_TEAM = 5H3WZ7BJYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -647,6 +662,7 @@
 				DEVELOPMENT_TEAM = 5H3WZ7BJYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
