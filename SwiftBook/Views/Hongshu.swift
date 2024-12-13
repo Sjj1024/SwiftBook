@@ -15,6 +15,7 @@ struct Hongshu: View {
     @EnvironmentObject var person: Person
     // 存储数据
     @AppStorage("username") var username = ""
+    
 
     var body: some View {
         NavigationStack {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E40529C02C38EE3D002EC42C /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40529BF2C38EE3D002EC42C /* CardItem.swift */; };
+		E4166E582D0C35AD001E8E5F /* WebViewUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4166E572D0C35AD001E8E5F /* WebViewUrl.swift */; };
 		E42C1AD72C3F8020000D2CE0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C1AD62C3F8020000D2CE0 /* HomeView.swift */; };
 		E42C1ADA2C3FC0C8000D2CE0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C1AD92C3FC0C8000D2CE0 /* Model.swift */; };
 		E42C1ADC2C40D093000D2CE0 /* LineWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C1ADB2C40D093000D2CE0 /* LineWrap.swift */; };
@@ -83,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		E40529BF2C38EE3D002EC42C /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		E4166E572D0C35AD001E8E5F /* WebViewUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUrl.swift; sourceTree = "<group>"; };
 		E42C1AD62C3F8020000D2CE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E42C1AD92C3FC0C8000D2CE0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E42C1ADB2C40D093000D2CE0 /* LineWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWrap.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				E46B26072C6DAEA100CF0F08 /* ScannerView.swift */,
 				E46B26092C6DAECB00CF0F08 /* ScanCode.swift */,
 				E46B260C2C6DB4B000CF0F08 /* WebView.swift */,
+				E4166E572D0C35AD001E8E5F /* WebViewUrl.swift */,
 			);
 			path = TestView;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				E4FE3EE42C40D3B100A467A5 /* WrapLayout.swift in Sources */,
 				E43866BC2C5DBFEB000CE387 /* LoadingSub.swift in Sources */,
 				E4FF7CE82C3D568E0057411C /* CollectorView.swift in Sources */,
+				E4166E582D0C35AD001E8E5F /* WebViewUrl.swift in Sources */,
 				E43331DC2C42281200CC73DA /* GridTest.swift in Sources */,
 				E42C1ADA2C3FC0C8000D2CE0 /* Model.swift in Sources */,
 				E4EF97992C3AA075003AB670 /* MessageView.swift in Sources */,
@@ -625,13 +629,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftBook/Preview Content\"";
-				DEVELOPMENT_TEAM = 5H3WZ7BJYK;
+				DEVELOPMENT_TEAM = 5C7Q7ZTKVG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftBook/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$请求使用摄像头";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$请求访问相册";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -643,8 +650,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songm;
+				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songjj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -656,13 +664,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftBook/Preview Content\"";
-				DEVELOPMENT_TEAM = 5H3WZ7BJYK;
+				DEVELOPMENT_TEAM = 5C7Q7ZTKVG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftBook/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$请求使用摄像头";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$请求访问相册";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -674,8 +685,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songm;
+				PRODUCT_BUNDLE_IDENTIFIER = hado.com.swift.hong.shu.songjj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
