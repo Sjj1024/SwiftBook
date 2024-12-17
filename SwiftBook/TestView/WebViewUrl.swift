@@ -9,10 +9,48 @@ import SwiftUI
 
 struct WebViewUrl: View {
     
-    let url = URL(string: "https://www.apple.com")!
+    @State var isMenu = false
+    
+    @State var url = URL(string: "https://www.apple.com")!
     
     var body: some View {
-        WebView(url: url).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, content: {
+            Text("菜单")
+                .padding()
+                .onTapGesture {
+                isMenu = !isMenu
+            }
+            WebView(url: url)
+                .edgesIgnoringSafeArea(.bottom)
+        })
+        .onTapGesture {
+            isMenu = !isMenu
+        }
+        .overlay(alignment: .topLeading, content: {
+            if isMenu {
+                VStack(content: {
+                    Text("百度").onTapGesture {
+                        isMenu = !isMenu
+                        url = URL(string: "https://www.bilibili.com/")!
+                    }
+                    Text("淘宝").onTapGesture {
+                        isMenu = !isMenu
+                        url = URL(string: "https://juejin.cn/")!
+                    }
+                    Text("百度").onTapGesture {
+                        isMenu = !isMenu
+                        url = URL(string: "https://www.bilibili.com/")!
+                    }
+                    Text("淘宝").onTapGesture {
+                        isMenu = !isMenu
+                        url = URL(string: "https://juejin.cn/")!
+                    }
+                })
+                .frame(width: 200, height: .infinity)
+                .background(Color.pink)
+            }
+        })
+
     }
 }
 
