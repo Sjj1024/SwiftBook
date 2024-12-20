@@ -23,9 +23,6 @@ struct WebViewUrl: View {
             WebView(url: url)
                 .edgesIgnoringSafeArea(.bottom)
         })
-        .onTapGesture {
-            isMenu = !isMenu
-        }
         .overlay(alignment: .topLeading, content: {
             if isMenu {
                 VStack(content: {
