@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var setToken: Bool = false
-    @State private var sheetView: Int = 0
+    @State private var sheetView: Int = 1
 
     var body: some View {
         ScrollView(content: {
@@ -23,7 +23,8 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            sheetView = 3
+                            setToken = true
                         }, label: {
                             Text("GitHub群二维码")
                                 .padding()
@@ -32,7 +33,8 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            sheetView = 2
+                            setToken = true
                         }, label: {
                             Text("Payjs支付码")
                                 .padding()
@@ -44,7 +46,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("内容同步")
                                 .padding()
@@ -53,7 +55,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("常用网站")
                                 .padding()
@@ -77,7 +79,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("WebView")
                                 .padding()
@@ -86,7 +88,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("页面跳转")
                                 .padding()
@@ -98,7 +100,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("Tab切换")
                                 .padding()
@@ -107,7 +109,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
                             Text("消息提醒")
                                 .padding()
@@ -131,7 +133,9 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            sheetView = 1
+                            setToken = true
+                            print("sheetView value: \(sheetView)")
                         }, label: {
                             Text("GithubToken")
                                 .padding()
@@ -140,7 +144,9 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            sheetView = 2
+                            setToken = true
+                            print("sheetView value: \(sheetView)")
                         }, label: {
                             Text("Payjs商户ID")
                                 .padding()
@@ -152,18 +158,18 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
-                            Text("GithubToken")
+                            Text("WxPusherToken")
                                 .padding()
                                 .background(.green)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken.toggle()
+                            setToken = true
                         }, label: {
-                            Text("Payjs商户ID")
+                            Text("定时任务")
                                 .padding()
                                 .background(.green)
                                 .foregroundColor(.white)
@@ -175,120 +181,23 @@ struct HomeView: View {
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .stroke(Color.orange, lineWidth: 1)
-                )
-                // 设置
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("设置").font(.title)
-                        Spacer()
-                    }
-
-                    HStack {
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("GithubToken")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("Payjs商户ID")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                    }
-
-                    HStack {
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("GithubToken")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("Payjs商户ID")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                    }
-                }
-                .padding()
-                .cornerRadius(10)
-                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .stroke(Color.orange, lineWidth: 1)
-                )
-                // 设置
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("设置").font(.title)
-                        Spacer()
-                    }
-
-                    HStack {
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("GithubToken")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("Payjs商户ID")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                    }
-
-                    HStack {
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("GithubToken")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                        Button(action: {
-                            setToken.toggle()
-                        }, label: {
-                            Text("Payjs商户ID")
-                                .padding()
-                                .background(.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        })
-                    }
-                }
-                .padding()
-                .cornerRadius(10)
-                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                ).overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .stroke(Color.orange, lineWidth: 1)
                 )
                 Spacer()
             })
             .padding()
             .sheet(isPresented: $setToken) {
-                SetToken()
+                switch sheetView {
+                    case 1:
+                        SetToken()
+                    case 2:
+                        PayJsId()
+                    case 3:
+                        WxCode()
+                    default:
+                        NotFound()
+                }
             }
         })
     }
