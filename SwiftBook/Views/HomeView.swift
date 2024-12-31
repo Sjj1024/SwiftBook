@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+enum sheetID: Identifiable {
+    var id: Int {
+        hashValue
+    }
+
+    case setGitToken, setPayJsToken, wxCode, payjsCode
+}
+
 struct HomeView: View {
-    @State private var setToken: Bool = false
-    @State private var sheetView: Int = 1
+    @State private var sheetView: sheetID?
 
     var body: some View {
         ScrollView(content: {
@@ -23,8 +30,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            sheetView = 3
-                            setToken = true
+                            sheetView = .wxCode
                         }, label: {
                             Text("GitHub群二维码")
                                 .padding()
@@ -33,8 +39,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            sheetView = 2
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("Payjs支付码")
                                 .padding()
@@ -46,7 +51,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("内容同步")
                                 .padding()
@@ -55,7 +60,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("常用网站")
                                 .padding()
@@ -79,7 +84,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("WebView")
                                 .padding()
@@ -88,7 +93,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("页面跳转")
                                 .padding()
@@ -100,7 +105,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("Tab切换")
                                 .padding()
@@ -109,7 +114,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("消息提醒")
                                 .padding()
@@ -133,9 +138,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            sheetView = 1
-                            setToken = true
-                            print("sheetView value: \(sheetView)")
+                            sheetView = .setGitToken
                         }, label: {
                             Text("GithubToken")
                                 .padding()
@@ -144,9 +147,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            sheetView = 2
-                            setToken = true
-                            print("sheetView value: \(sheetView)")
+                            sheetView = .setPayJsToken
                         }, label: {
                             Text("Payjs商户ID")
                                 .padding()
@@ -158,7 +159,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("WxPusherToken")
                                 .padding()
@@ -167,7 +168,7 @@ struct HomeView: View {
                                 .cornerRadius(10)
                         })
                         Button(action: {
-                            setToken = true
+                            sheetView = .payjsCode
                         }, label: {
                             Text("定时任务")
                                 .padding()
@@ -187,18 +188,18 @@ struct HomeView: View {
                 Spacer()
             })
             .padding()
-            .sheet(isPresented: $setToken) {
+            .sheet(item: $sheetView, content: { sheetView in
                 switch sheetView {
-                    case 1:
-                        SetToken()
-                    case 2:
-                        PayJsId()
-                    case 3:
-                        WxCode()
-                    default:
-                        NotFound()
+                case .setGitToken:
+                    SetToken()
+                case .setPayJsToken:
+                    PayJsId()
+                case .wxCode:
+                    WxCode()
+                case .payjsCode:
+                    PayjsCode()
                 }
-            }
+            })
         })
     }
 }
