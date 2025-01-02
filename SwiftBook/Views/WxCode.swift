@@ -17,6 +17,8 @@ struct WxCode: View {
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var imageData: Data? = nil
     @State private var uploadStatus: String = "等待上传"
+    
+    @State private var showAlert = false
 
     var body: some View {
         VStack {
@@ -40,7 +42,7 @@ struct WxCode: View {
             PhotosPicker(selection: $selectedItem, matching: .images) {
                 Text("从相册选择图片")
                     .padding()
-                    .background(.green)
+                    .background(token != nil && token != "" ? .green : .gray)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
@@ -49,17 +51,28 @@ struct WxCode: View {
             }
             
             Button(action: {
-                uploadImageToGitHub()
+                if token != nil, token != "" {
+                    uploadImageToGitHub()
+                } else {
+                    showAlert = true
+                }
             }, label: {
                 Text("上传到 GitHub")
                     .padding()
-                    .background(.green)
+                    .background(token != nil && token != "" ? .green : .gray)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-            })
-            
+            }).alert("提示", isPresented: $showAlert) {
+                Button("确定", role: .cancel) {
+                    print("弹窗确定")
+                }
+            } message: {
+                Text("请先配置GithubToken")
+            }
+
             Text(uploadStatus)
                 .foregroundColor(.gray)
+                .padding(.top)
         }
         .padding()
         .onAppear {
@@ -70,6 +83,9 @@ struct WxCode: View {
     // 获取二维码图片的commit sha
     private func getWxCodeSha() {
         print("get wxcode sha")
+        if token == nil || token == "" {
+            return
+        }
         let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
         AF.request(url, method: .get, headers: [
             "Authorization": "Bearer " + (token ?? ""),
