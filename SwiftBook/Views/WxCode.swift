@@ -9,11 +9,6 @@ import Alamofire
 import PhotosUI
 import SwiftUI
 
-// GitHub API 响应数据模型
-struct GitHubFileResponse: Decodable {
-    let sha: String
-}
-
 struct WxCode: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -39,7 +34,7 @@ struct WxCode: View {
             } else {
                 Text("选择一张图片")
                     .padding()
-                    .font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
             }
 
             PhotosPicker(selection: $selectedItem, matching: .images) {
@@ -77,13 +72,13 @@ struct WxCode: View {
         print("get wxcode sha")
         let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
         AF.request(url, method: .get, headers: [
-            "Authorization": "Bearer ",
+            "Authorization": "Bearer " + (token ?? ""),
             "User-Agent": "PostmanRuntime/7.41.2",
-        ]).responseDecodable(of: GitHubFileResponse.self) { response in
+        ]).responseDecodable(of: GitHubRes.self) { response in
             switch response.result {
             case .success(let fileData):
-                sha = fileData.sha
-                print("wxcode sha: \(fileData.sha)")
+                sha = fileData.sha ?? ""
+                print("wxcode sha: \(sha)")
             case .failure(let error):
                 sha = "Error: \(error.localizedDescription)"
                 print("wxcode error:\(error.localizedDescription)")
@@ -124,10 +119,10 @@ struct WxCode: View {
         
         // 发送请求
         AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: [
-            "Authorization": "Bearer \(String(describing: token))",
+            "Authorization": "Bearer " + (token ?? ""),
             "User-Agent": "PostmanRuntime/7.41.2",
         ])
-        .responseDecodable(of: GitHubFileResponse.self) { response in
+        .responseDecodable(of: GitHubRes.self) { response in
             switch response.result {
             case .success:
                 print("上传成功")

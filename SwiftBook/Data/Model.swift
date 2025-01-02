@@ -36,3 +36,9 @@ struct Man: Identifiable {
 class ProcessObs: ObservableObject {
     @Published var process = 0.1
 }
+
+
+// GitHub API 响应数据模型
+struct GitHubRes: Decodable {
+    let sha: String?
+}
