@@ -9,9 +9,15 @@ import Alamofire
 import PhotosUI
 import SwiftUI
 
+// GitHub API 响应数据模型
+struct GitHubFileResponse: Decodable {
+    let sha: String
+}
+
 struct WxCode: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State private var sha: String = "Fetching..."
     @AppStorage("githubtoken") var token: String?
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var imageData: Data? = nil
@@ -19,6 +25,10 @@ struct WxCode: View {
 
     var body: some View {
         VStack {
+            Text("更新GitHub二维码")
+                .font(.title)
+                .padding()
+            // 选择图片
             if let imageData,
                let uiImage = UIImage(data: imageData)
             {
@@ -29,29 +39,56 @@ struct WxCode: View {
             } else {
                 Text("选择一张图片")
                     .padding()
+                    .font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/)
             }
 
             PhotosPicker(selection: $selectedItem, matching: .images) {
                 Text("从相册选择图片")
+                    .padding()
+                    .background(.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
             .onChange(of: selectedItem) {
                 loadSelectedPhoto()
             }
-                
-            Button("上传到 GitHub") {
+            
+            Button(action: {
                 uploadImageToGitHub()
-            }
-            .padding()
-            Text("token: \(token)")
+            }, label: {
+                Text("上传到 GitHub")
+                    .padding()
+                    .background(.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            })
+            
             Text(uploadStatus)
                 .foregroundColor(.gray)
         }
         .padding()
+        .onAppear {
+            getWxCodeSha()
+        }
     }
     
-    // 获取仓库列表
-    private func getRepos() {
-        print("获取仓库列表")
+    // 获取二维码图片的commit sha
+    private func getWxCodeSha() {
+        print("get wxcode sha")
+        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
+        AF.request(url, method: .get, headers: [
+            "Authorization": "Bearer ",
+            "User-Agent": "PostmanRuntime/7.41.2",
+        ]).responseDecodable(of: GitHubFileResponse.self) { response in
+            switch response.result {
+            case .success(let fileData):
+                sha = fileData.sha
+                print("wxcode sha: \(fileData.sha)")
+            case .failure(let error):
+                sha = "Error: \(error.localizedDescription)"
+                print("wxcode error:\(error.localizedDescription)")
+            }
+        }
     }
         
     // 加载相册中选择的图片
@@ -76,26 +113,27 @@ struct WxCode: View {
         let base64String = imageData.base64EncodedString()
             
         // GitHub API 参数
-        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.jpg"
+        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
             
         // 构建请求体
         let parameters: [String: Any] = [
             "message": "update code wxcode",
             "content": base64String,
+            "sha": sha,
         ]
         
-        print("github token: \(token)")
         // 发送请求
         AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: [
-            "Authorization": "Bearer ",
+            "Authorization": "Bearer \(String(describing: token))",
             "User-Agent": "PostmanRuntime/7.41.2",
         ])
-        .validate()
-        .responseJSON { response in
+        .responseDecodable(of: GitHubFileResponse.self) { response in
             switch response.result {
             case .success:
+                print("上传成功")
                 uploadStatus = "上传成功"
             case .failure(let error):
+                print("上传失败")
                 uploadStatus = "上传失败: \(error.localizedDescription)"
             }
         }
