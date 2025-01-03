@@ -12,7 +12,7 @@ enum sheetID: Identifiable {
         hashValue
     }
 
-    case setGitToken, setPayJsToken, wxCode, payjsCode
+    case setGitToken, setPayJsToken, wxCode, payjsCode, gitAsync
 }
 
 struct HomeView: View {
@@ -51,7 +51,7 @@ struct HomeView: View {
 
                     HStack {
                         Button(action: {
-                            sheetView = .payjsCode
+                            sheetView = .gitAsync
                         }, label: {
                             Text("内容同步")
                                 .padding()
@@ -198,7 +198,10 @@ struct HomeView: View {
                     WxCode()
                 case .payjsCode:
                     PayjsCode()
+                case .gitAsync:
+                    GitAsync()
                 }
+
             })
         })
     }

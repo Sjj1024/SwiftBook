@@ -9,7 +9,6 @@ import Foundation
 
 // 创建模型类
 class Person: ObservableObject {
-    
     @Published var id: Int = 0
 
     @Published var manList: [Man] = [
@@ -31,14 +30,12 @@ struct Man: Identifiable {
     var content: String
 }
 
-
-
 class ProcessObs: ObservableObject {
     @Published var process = 0.1
 }
 
-
 // GitHub API 响应数据模型
 struct GitHubRes: Decodable {
     let sha: String?
+    let content: String?
 }

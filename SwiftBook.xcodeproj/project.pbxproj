@@ -11,6 +11,7 @@
 		E40F96042D224C6E00F4A54B /* PayjsCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40F96032D224C6E00F4A54B /* PayjsCode.swift */; };
 		E40F96082D227DE700F4A54B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E40F96072D227DE700F4A54B /* Alamofire */; };
 		E4166E582D0C35AD001E8E5F /* WebViewUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4166E572D0C35AD001E8E5F /* WebViewUrl.swift */; };
+		E42A34722D2693C800F20298 /* GitAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A34712D2693C800F20298 /* GitAsync.swift */; };
 		E42C1ADA2C3FC0C8000D2CE0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C1AD92C3FC0C8000D2CE0 /* Model.swift */; };
 		E42C1ADC2C40D093000D2CE0 /* LineWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C1ADB2C40D093000D2CE0 /* LineWrap.swift */; };
 		E43331DA2C421F1D00CC73DA /* DialogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43331D92C421F1C00CC73DA /* DialogTest.swift */; };
@@ -93,6 +94,7 @@
 		E40529BF2C38EE3D002EC42C /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		E40F96032D224C6E00F4A54B /* PayjsCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayjsCode.swift; sourceTree = "<group>"; };
 		E4166E572D0C35AD001E8E5F /* WebViewUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUrl.swift; sourceTree = "<group>"; };
+		E42A34712D2693C800F20298 /* GitAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAsync.swift; sourceTree = "<group>"; };
 		E42C1AD92C3FC0C8000D2CE0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E42C1ADB2C40D093000D2CE0 /* LineWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWrap.swift; sourceTree = "<group>"; };
 		E43331D92C421F1C00CC73DA /* DialogTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogTest.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				E458DF232D216775007AE2A9 /* WxCode.swift */,
 				E458DF272D216FFA007AE2A9 /* NotFound.swift */,
 				E40F96032D224C6E00F4A54B /* PayjsCode.swift */,
+				E42A34712D2693C800F20298 /* GitAsync.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				E40F96042D224C6E00F4A54B /* PayjsCode.swift in Sources */,
 				E43331DC2C42281200CC73DA /* GridTest.swift in Sources */,
 				E42C1ADA2C3FC0C8000D2CE0 /* Model.swift in Sources */,
+				E42A34722D2693C800F20298 /* GitAsync.swift in Sources */,
 				E4EF97992C3AA075003AB670 /* MessageView.swift in Sources */,
 				E4CD9F7D2C3A42200029347C /* FollowUserCard.swift in Sources */,
 			);

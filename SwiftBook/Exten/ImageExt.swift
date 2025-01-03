@@ -16,3 +16,17 @@ extension Image {
             .mask(Circle())
     }
 }
+
+
+extension String {
+    // Base64 编码
+    func toBase64() -> String {
+        return Data(self.utf8).base64EncodedString()
+    }
+    
+    // Base64 解码
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self) else { return nil }
+        return String(data: data, encoding: .utf8)
+    }
+}
