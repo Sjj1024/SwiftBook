@@ -86,7 +86,7 @@ struct WxCode: View {
         if token == nil || token == "" {
             return
         }
-        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
+        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/static/imgs/wxcode.png"
         AF.request(url, method: .get, headers: [
             "Authorization": "Bearer " + (token ?? ""),
             "User-Agent": "PostmanRuntime/7.41.2",
@@ -124,7 +124,7 @@ struct WxCode: View {
         let base64String = imageData.base64EncodedString()
             
         // GitHub API 参数
-        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/wxcode.png"
+        let url = "https://api.github.com/repos/Sjj1024/PakePlus/contents/docs/static/imgs/wxcode.png"
             
         // 构建请求体
         let parameters: [String: Any] = [
@@ -132,6 +132,8 @@ struct WxCode: View {
             "content": base64String,
             "sha": sha,
         ]
+
+        print("kaishishagnchuan")
         
         // 发送请求
         AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: [
