@@ -2,12 +2,15 @@
 
 一个使用 swift 开发小红书 app 的仓库，学习阶段，不保证代码质量
 
+```
+make package FINALPACKAGE=1 PACKAGE_FORMAT=ipa
+```
 
 # 本项目页面预览
+
 ![](./Resources/hongshu.png)
 ![](./Resources/account.png)
 ![](./Resources/message.png)
-
 
 # 实际工作项目
 
@@ -15,15 +18,12 @@
 功能：  
 1.扫码识别  
 2.支持记录  
-3.可以锁屏  
-
- 
+3.可以锁屏
 
 2.一个抖音直播 mac 客户端  
 输入抖音直播网址，可以看直播和弹幕消息
 
-
-3.一个可以将所有网页应用转为mac应用的程序
+3.一个可以将所有网页应用转为 mac 应用的程序
 并支持修改名称和图标
-并支持添加自定义js代码
+并支持添加自定义 js 代码
 支持文件下载

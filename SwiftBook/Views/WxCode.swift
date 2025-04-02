@@ -146,7 +146,7 @@ struct WxCode: View {
                 print("上传成功")
                 uploadStatus = "上传成功"
             case .failure(let error):
-                print("上传失败")
+                print("上传失败: \(error.localizedDescription)")
                 uploadStatus = "上传失败: \(error.localizedDescription)"
             }
         }
